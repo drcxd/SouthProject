@@ -1,0 +1,31 @@
+	// Get first background and character
+	m_background = m_objectsMap[m_pBackground->Attribute("objectID")];
+	m_pBackground = m_pBackground->NextSiblingElement();
+	m_figure = m_objectsMap[m_pFigure->Attribute("objectID")];
+	m_pFigure = m_pFigure->NextSiblingElement();
+
+	return true;
+}
+
+bool Scene::onExit(void)
+{
+	return true;
+}
+
+void Scene::update(void)
+{
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN))
+	{
+//		m_background = m_objectsMap[m_pBackground->Attribute("objectID")];
+		m_pBackground = m_pBackground->NextSiblingElement();
+		m_figure = m_objectsMap[m_pFigure->Attribute("objectID")];
+		m_pFigure = m_pFigure->NextSiblingElement();
+	}
+}
+
+Code in the comment line will cause a "read access violation" problem.
+The stack is like this:
+...
+c_str()
+Attribute()
+update()

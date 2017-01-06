@@ -1,0 +1,27 @@
+<TEXTURES>
+  <texture filename="image/main_bg.png" textureID="main_bg"/>
+  <texture filename="image/morning.png" textureID="morning"/>
+  <texture filename="image/yukino.png" textureID="yukino"/>
+  <texture filename="image/noon.png" textureID="noon"/>
+  <texture filename="image/afternoon.png" textureID="afternoon"/>
+  <texture filename="image/street.png" textureID="street"/>
+  <texture filename="image/blood.png" textureID="blood"/>
+  <texture filename="image/steve.png" textureID="steve"/>
+  <texture filename="image/night.png" textureID="night"/>
+  <texture filename="image/strong-enemy.png" textureID="strong_enemy"/>
+  <texture filename="image/walkway.png" textureID="walkway"/>
+  <texture filename="image/zombie_dog.png" textureID="zombie_dog"/>
+  <texture filename="image/broken_window.png" textureID="broken_window"/>
+  <texture filename="image/classroom.png" textureID="classroom"/>
+  <texture filename="image/snake.png" textureID="snake"/>
+  <texture filename="image/shelf.png" textureID="shelf"/>
+  <texture filename="image/fork.png" textureID="fork"/>
+  <texture filename="image/ugly_enemy.png" textureID="ugly_enemy"/>
+  <texture filename="image/sky.png" textureID="sky"/>
+  <texture filename="image/zombie.png" textureID="zombie"/>
+  <texture filename="image/lucy.jpg" textureID="lucy"/>
+  <texture filename="image/ninja.png" textureID="ninja"/>
+  <texture filename="image/early_morning.png" textureID="early_morning"/>
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+</TEXTURES>

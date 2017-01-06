@@ -1,0 +1,743 @@
+<?xml version="1.0" ?>
+<SCENES>
+  <scene01>
+    <TEXT>
+      <textfile filename="scripts/scene01.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="morning" objectID="morning"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="morning"/>
+      <background objectID="morning"/>
+      <background objectID="morning"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="yukino"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene02"/>
+      <choice nextSceneID="scene03"/>
+    </CHOICES>
+  </scene01>
+
+  <scene02>
+    <TEXT>
+      <textfile filename="scripts/scene02.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="morning" objectID="morning"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="morning"/>
+      <background objectID="morning"/>
+      <background objectID="morning"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene02>
+
+  <scene03>
+    <TEXT>
+      <textfile filename="scripts/scene03.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="noon" objectID="noon"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="noon"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="yukino"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene04"/>
+      <choice nextSceneID="scene05"/>
+    </CHOICES>
+  </scene03>
+
+  <scene04>
+    <TEXT>
+      <textfile filename="scripts/scene04.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="noon" objectID="noon"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="noon"/>
+      <background objectID="noon"/>
+      <background objectID="noon"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene04>
+
+  <scene05>
+    <TEXT>
+      <textfile filename="scripts/scene05.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="afternoon" objectID="afternoon"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="afternoon"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="yukino"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene07"/>
+      <choice nextSceneID="scene06"/>
+    </CHOICES>
+  </scene05>
+
+  <scene06>
+    <TEXT>
+      <textfile filename="scripts/scene06.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="street" objectID="street"/>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="null"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+      <background objectID="street"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>      
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene06>
+
+  <scene07>
+    <TEXT>
+      <textfile filename="scripts/scene07.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="afternoon" objectID="afternoon"/>
+      <object x="408" y="115" width="204" height="460"
+	      textureID="yukino" objectID="yukino"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="yukino"/>
+      <figure objectID="yukino"/>
+      <figure objectID=""/>
+      <figure objectID=""/>
+      <figure objectID=""/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene09"/>
+      <choice nextSceneID="scene08"/>
+    </CHOICES>
+  </scene07>
+
+  <scene08>
+    <TEXT>
+      <textfile filename="scripts/scene08.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="blood" objectID="blood"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="blood"/>
+      <background objectID="blood"/>
+      <background objectID="blood"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene08>
+
+  <scene09>
+    <TEXT>
+      <textfile filename="scripts/scene09.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="afternoon" objectID="afternoon"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+      <background objectID="afternoon"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="steve"/>
+      <figure objectID="steve"/>
+      <figure objectID="steve"/>
+      <figure objectID="steve"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene11"/>
+      <choice nextSceneID="scene10"/>
+    </CHOICES>
+  </scene09>
+
+  <scene10>
+    <TEXT>
+      <textfile filename="scripts/scene10.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="night" objectID="night"/>
+      <object x="341" y="114" width="479" height="460"
+	      textureID="strong_enemy" objectID="strong_enemy"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="night"/>
+      <background objectID="night"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="strong_enemy"/>
+      <figure objectID="strong_enemy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene10>
+
+  <scene11>
+    <TEXT>
+      <textfile filename="scripts/scene11.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="afternoon" objectID="afternoon"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="walkway" objectID="walkway"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="broken_window" objectID="broken_window"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="zombie_dog" objectID="zombie_dog"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="afternoon"/>
+      <background objectID="walkway"/>
+      <background objectID="broken_window"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="steve"/>
+      <figure objectID="null"/>
+      <figure objectID="zombie_dog"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene12"/>
+      <choice nextSceneID="scene13"/>
+    </CHOICES>
+  </scene11>
+
+  <scene12>
+    <TEXT>
+      <textfile filename="scripts/scene12.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="walkway" objectID="walkway"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="zombie_dog" objectID="zombie_dog"/>
+      <object x="341" y="115" width="560" height="460"
+	      textureID="strong_enemy" objectID="strong_enemy"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="walkway"/>
+      <background objectID="walkway"/>
+      <background objectID="walkway"/>
+      <background objectID="walkway"/>
+      <background objectID="walkway"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="zombie_dog"/>
+      <figure objectID="steve"/>
+      <figure objectID="null"/>
+      <figure objectID="strong_enemy"/>
+      <figure objectID="strong_enemy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene12>
+
+  <scene13>
+    <TEXT>
+      <textfile filename="scripts/scene13.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="zombie_dog" objectID="zombie_dog"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="walkway" objectID="walkway"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+      <object x="341" y="115" width="479" height="460"
+	      textureID="snake" objectID="snake"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="shelf" objectID="shelf"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="walkway"/>
+      <background objectID="walkway"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="walkway"/>
+      <background objectID="shelf"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="zombie_dog"/>
+      <figure objectID="null"/>
+      <figure objectID="snake"/>
+      <figure objectID="null"/>
+      <figure objectID="steve"/>
+      <figure objectID="steve"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene18"/>
+      <choice nextSceneID="scene14"/>
+    </CHOICES>
+  </scene13>
+
+  <scene14>
+    <TEXT>
+      <textfile filename="scripts/scene14.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="fork" objectID="fork"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="fork"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene15"/>
+      <choice nextSceneID="scene16"/>
+      <choice nextSceneID="scene17"/>
+    </CHOICES>
+  </scene14>
+
+  <scene15>
+    <TEXT>
+      <textfile filename="scripts/scene15.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="341" y="115" width="479" height="460"
+	      textureID="ugly_enemy" objectID="ugly_enemy"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="fork" objectID="fork"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="fork"/>
+      <background objectID="fork"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="ugly_enemy"/>
+      <figure objectID="ugly_enemy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene15>
+
+  <scene16>
+    <TEXT>
+      <textfile filename="scripts/scene16.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="sky" objectID="sky"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="sky"/>
+      <background objectID="sky"/>
+      <background objectID="sky"/>
+      <background objectID="sky"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene16>
+
+  <scene17>
+    <TEXT>
+      <textfile filename="scripts/scene17.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="fork" objectID="fork"/>
+      <object x="341" y="115" width="560" height="460"
+	      textureID="strong_enemy" objectID="strong_enemy"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="fork"/>
+      <background objectID="fork"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="strong_enemy"/>
+      <figure objectID="strong_enemy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene17>
+
+  <scene18>
+    <TEXT>
+      <textfile filename="scripts/scene18.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="341" y="115" width="479" height="460"
+	      textureID="zombie" objectID="zombie"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="shelf" objectID="shelf"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>      
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="shelf"/>
+      <background objectID="shelf"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="zombie"/>
+      <figure objectID="zombie"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="steve"/>
+      <figure objectID="steve"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene19"/>
+      <choice nextSceneID="scene20"/>
+    </CHOICES>
+  </scene18>
+
+  <scene19>
+    <TEXT>
+      <textfile filename="scripts/scene19.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+      <object x="341" y="115" width="560" height="527"
+	      textureID="steve" objectID="steve"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="steve"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene19>
+
+  <scene20>
+    <TEXT>
+      <textfile filename="scripts/scene20.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="194" y="0" width="635" height="576"
+	      textureID="lucy" objectID="lucy"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="lucy"/>
+      <figure objectID="lucy"/>
+      <figure objectID="lucy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene22"/>
+      <choice nextSceneID="scene21"/>
+    </CHOICES>
+  </scene20>
+
+  <scene21>
+    <TEXT>
+      <textfile filename="scripts/scene21.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="341" y="115" width="479" height="460"
+	      textureID="ninja" objectID="ninja"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+      <background objectID="classroom"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="null"/>
+      <figure objectID="ninja"/>
+      <figure objectID="ninja"/>
+      <figure objectID="ninja"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene21>
+
+  <scene22>
+    <TEXT>
+      <textfile filename="scripts/scene22.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="194" y="0" width="635" height="576"
+	      textureID="lucy" objectID="lucy"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="classroom" objectID="classroom"/>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="early_morning" objectID="early_morning"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="classroom"/>
+      <background objectID="early_morning"/>
+      <background objectID="early_morning"/>
+      <background objectID="early_morning"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="lucy"/>
+      <figure objectID="lucy"/>
+      <figure objectID="lucy"/>
+      <figure objectID="lucy"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+      <choice nextSceneID="scene23"/>
+    </CHOICES>
+  </scene22>
+
+  <scene23>
+    <TEXT>
+      <textfile filename="scripts/scene23.txt"/>
+    </TEXT>
+
+    <OBJECTS>
+      <object x="0" y="0" width="1024" height="576"
+	      textureID="main_bg" objectID="main_bg"/>
+    </OBJECTS>
+
+    <BACKGROUND>
+      <background objectID="main_bg"/>
+    </BACKGROUND>
+
+    <FIGURE>
+      <figure objectID="null"/>
+    </FIGURE>
+
+    <CHOICES>
+      <choice nextSceneID="scene01"/>
+    </CHOICES>
+  </scene23>
+
+      
+</SCENES>
