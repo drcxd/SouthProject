@@ -50,7 +50,7 @@ private:
 
 	bool m_bQuitPointer;
 
-	TiXmlDocument m_xmlDoc;
+	// TiXmlDocument m_xmlDoc;
 	// TiXmlElement *m_pRoot;
 
 	std::vector<std::pair<std::string, int>> m_backgrounds;

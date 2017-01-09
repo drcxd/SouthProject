@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<CONSTANTS>
+  <constant x="100"/>
+  <constant y="100"/>
+  <constant screen_width="1024"/>
+  <constant screen_height="576"/>
+  <constant fps="60"/>
+  <constant title="SouthProject01"/>
+</CONSTANTS>

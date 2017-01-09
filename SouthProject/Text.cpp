@@ -1,8 +1,14 @@
 #include "Text.h"
 #include "Game.h"
-#include "Constants.h"
 #include <iostream>
 #include <SDL_image.h>
+
+extern int SCREEN_WIDTH;
+extern int SCREEN_HEIGHT;
+extern int TEXT_BG_WIDTH;
+extern int TEXT_BG_HEIGHT;
+extern int TEXT_ROW_HEIGHT;
+extern int TEXT_ROW_START;
 
 Text *Text::s_pInstance = NULL;
 
@@ -114,7 +120,7 @@ void Text::draw(void)
 // Actually draw background
 void Text::drawBackground(void)
 {
-	SDL_Rect destRect = { 0, SCREEN_HEIGHT / 5 * 4, SCREEN_WIDTH,  SCREEN_HEIGHT / 5 };
+	SDL_Rect destRect = { 0, SCREEN_HEIGHT / 5 * 4, TEXT_BG_WIDTH,  TEXT_BG_HEIGHT };
 	SDL_RenderCopyEx(TheGame::Instance()->getRenderer(), m_pBackground, NULL, &destRect, 0, 0, SDL_FLIP_NONE);
 }
 

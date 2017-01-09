@@ -1,15 +1,18 @@
 #include "Scene.h"
 #include "InputHandler.h"
-#include "Constants.h"
 #include "AudioManager.h"
 
 #include <iostream>
+
+extern int SCREEN_HEIGHT;
+extern int TEXT_ROW_HEIGHT;
+extern int TEXT_ROW_START;
 
 bool Scene::onEnter(void)
 {
 	TiXmlDocument m_xmlDoc;
 
-	if (!m_xmlDoc.LoadFile("scripts/test.xml"))
+	if (!m_xmlDoc.LoadFile("scripts/scenes.xml"))
 	{
 		std::cout << "Failed when loading xml file. Error: " << m_xmlDoc.ErrorDesc() << "\n";
 		return false;
