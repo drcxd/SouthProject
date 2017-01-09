@@ -6,6 +6,7 @@
 #include "Game.h"
 #include "PlayState.h"
 #include "Scene.h"
+#include "AudioManager.h"
 
 const std::string MenuState::s_menuID = "MENU";
 
@@ -37,6 +38,9 @@ bool MenuState::onEnter(void)
 
 	m_gameObjects.push_back(main_background);
 
+	TheAudioManager::Instance()->load("music/StartMenu.mp3", "startmenu");
+	TheAudioManager::Instance()->play("startmenu");
+
 	return true;
 }
 
@@ -46,6 +50,8 @@ bool MenuState::onExit(void)
 	{
 		m_gameObjects[i]->clean();
 	}
+
+	TheAudioManager::Instance()->stop();
 
 	return true;
 }

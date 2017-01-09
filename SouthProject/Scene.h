@@ -3,12 +3,17 @@
 
 #include "GameState.h"
 #include "SDLGameObject.h"
-#include <vector>
-#include "tinyxml.h"
-#include <map>
-#include <fstream>
 #include "Text.h"
 #include "TextButton.h"
+
+#include <vector>
+#include <map>
+#include <fstream>
+#include <utility>
+#include <string>
+
+#include "tinyxml.h"
+
 
 class Scene : public GameState
 {
@@ -27,22 +32,36 @@ public:
 
 private:
 
-	int m_count;
-	int m_max;
+	int m_count; // Total pages count
+	int m_max; // Varaiable holds total page number
+
 	const std::string m_sceneID;
+
 	GameObject *m_background;
 	GameObject *m_figure;
+
 	std::string m_text;
+	std::string m_textLines;
 	std::ifstream m_input;
-	std::map<std::string, GameObject *> m_objectsMap;
+
 	std::vector<TextButton *> m_textButtons;
 	std::vector<std::string> m_nextSceneIDs;
-	int m_focused_point;
+	unsigned m_focused_point;
+
 	bool m_bQuitPointer;
 
 	TiXmlDocument m_xmlDoc;
 	// TiXmlElement *m_pRoot;
-	std::vector<std::string> m_backgrounds;
-	std::vector<std::string> m_figures;
+
+	std::vector<std::pair<std::string, int>> m_backgrounds;
+	unsigned m_bgTimer;
+	unsigned m_bgCounter;
+	std::vector<std::pair<std::string, int>> m_figures;
+	unsigned m_fgTimer;
+	unsigned m_fgCounter;
+	std::vector<std::pair<std::string, int>> m_music;
+	unsigned m_msTimer;
+	unsigned m_msCounter;
+	std::map<std::string, GameObject *> m_objectsMap;
 };
 #endif // !__Scene__

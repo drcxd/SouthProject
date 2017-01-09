@@ -2,8 +2,10 @@
 #define __Text__
 
 #include <SDL.h>
-#include <string>
 #include <SDL_ttf.h>
+
+#include <string>
+#include <vector>
 
 class Text
 {
@@ -21,7 +23,7 @@ public:
 		return s_pInstance;
 	}
 
-	void setContent(std::string);
+	void setContent(std::string, unsigned i);
 	void draw(void);
 	void drawBackground(void);
 	void clean(void);
@@ -30,15 +32,15 @@ public:
 private:
 
 	std::string m_content;
-	SDL_Texture *m_pTexture;
+	std::vector<SDL_Texture *> m_pTextures;
 	SDL_Texture *m_pBackground;
 
 	bool setTexture(std::string content);
 	TTF_Font *m_pFont;
 	SDL_Color m_textColor = { 0, 0, 0 };
 
-	int m_Width;
-	int m_Height;
+	std::vector<int> m_Widths;
+	std::vector<int> m_Heights;
 
 	Text(void);
 	static Text *s_pInstance;

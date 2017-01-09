@@ -25,7 +25,7 @@ InputHandler::InputHandler(void) : m_bEnterPressed(false), m_bUpPressed(false), 
 
 void InputHandler::update(void)
 {
-	SDL_Event event;
+	SDL_Event event; // Variable to hold every event 
 	while (SDL_PollEvent(&event))
 	{
 		switch (event.type)

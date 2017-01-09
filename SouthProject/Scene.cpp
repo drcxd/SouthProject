@@ -1,6 +1,7 @@
 #include "Scene.h"
 #include "InputHandler.h"
 #include "Constants.h"
+#include "AudioManager.h"
 
 #include <iostream>
 
@@ -25,9 +26,18 @@ bool Scene::onEnter(void)
 			pSceneRoot = e;
 		}
 	}
+	TiXmlElement *pSubRoot = NULL;
+
+	// Get total page number of the scene
+	for (TiXmlElement *e = pSceneRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
+		if (e->Value() == std::string("PAGE"))
+			pSubRoot = e;
+	{
+		TiXmlElement *e = pSubRoot->FirstChildElement();
+		e->Attribute("pageNumber", &m_max);
+	}
 
 	// Open text file
-	TiXmlElement *pSubRoot = NULL;
 	for (TiXmlElement *e = pSceneRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		if (e->Value() == std::string("TEXT"))
@@ -35,13 +45,34 @@ bool Scene::onEnter(void)
 			pSubRoot = e;
 		}
 	}
-	for (TiXmlElement *e = pSubRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
+	{
+		TiXmlElement *e = pSubRoot->FirstChildElement();
+		std::string fileName = e->Attribute("filename");
+		m_input.open(fileName.c_str());
+		m_textLines = e->Attribute("lines");
+	}
+
+	/*for (TiXmlElement *e = pSubRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		std::string fileName = e->Attribute("filename");
 		m_input.open(fileName.c_str());
+	}*/
+
+	// Load music
+	for (TiXmlElement *e = pSceneRoot->FirstChildElement(); e != 0; e = e->NextSiblingElement())
+		if (e->Value() == std::string("MUSIC"))
+			pSubRoot = e;
+	for (TiXmlElement *e = pSubRoot->FirstChildElement(); e != 0; e = e->NextSiblingElement())
+	{
+		std::string fileName, id;
+		int pages;
+		fileName = e->Attribute("filename");
+		id = e->Attribute("id");
+		e->Attribute("pages", &pages);
+		TheAudioManager::Instance()->load(fileName, id);
+		m_music.push_back(std::pair<std::string, int>(id, pages));
 	}
 
-	m_max = 0;
 	// Get background queue
 	for (TiXmlElement *e = pSceneRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
@@ -53,12 +84,13 @@ bool Scene::onEnter(void)
 	for (TiXmlElement *e = pSubRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		std::string objectID;
+		int pages;
 		objectID = e->Attribute("objectID");
-		m_backgrounds.push_back(objectID);
-		m_max++;
+		e->Attribute("pages", &pages);
+		m_backgrounds.push_back(std::pair<std::string, int>(objectID, pages));
 	}
 
-	// Get figure root
+	// Get figure queue
 	for (TiXmlElement *e = pSceneRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		if (e->Value() == std::string("FIGURE"))
@@ -69,8 +101,10 @@ bool Scene::onEnter(void)
 	for (TiXmlElement *e = pSubRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		std::string objectID;
+		int pages;
 		objectID = e->Attribute("objectID");
-		m_figures.push_back(objectID);
+		e->Attribute("pages", &pages);
+		m_figures.push_back(std::pair<std::string, int>(objectID, pages));
 	}
 
 	// Get next scene ID
@@ -113,12 +147,21 @@ bool Scene::onEnter(void)
 	}
 	m_objectsMap[std::string("null")] = NULL;
 
-	// Get first background and character
+	// Get first background, character, music and text
 	m_count = 0;
-	m_background = m_objectsMap[m_backgrounds[m_count]];
-	m_figure = m_objectsMap[m_figures[m_count]];
-	std::getline(m_input, m_text, '\n');
-	TheTextManager::Instance()->setContent(m_text);
+	m_bgCounter = m_fgCounter = m_msCounter = 0;
+	m_bgTimer = m_backgrounds[m_bgCounter].second;
+	m_fgTimer = m_figures[m_fgCounter].second;
+	m_msTimer = m_music[m_fgCounter].second;
+	m_background = m_objectsMap[m_backgrounds[m_bgCounter].first];
+	m_figure = m_objectsMap[m_figures[m_fgCounter].first];
+	TheAudioManager::Instance()->play(m_music[m_msCounter].first);
+	// Read text depend on current lines.
+	for (unsigned i = 0; i < m_textLines.at(m_count) - '0'; i++)
+	{
+		std::getline(m_input, m_text, '\n');
+		TheTextManager::Instance()->setContent(m_text, i);
+	}
 
 	m_bQuitPointer = false;
 
@@ -127,6 +170,7 @@ bool Scene::onEnter(void)
 
 bool Scene::onExit(void)
 {
+	TheAudioManager::Instance()->stop();
 	for (std::vector<std::string>::size_type i = 0; i < m_textButtons.size(); i++)
 	{
 		delete m_textButtons[i];
@@ -143,10 +187,50 @@ void Scene::update()
 		if (m_count < m_max)
 		{
 			TheInputHandler::Instance()->setEnterFree();
-			m_background = m_objectsMap[m_backgrounds[m_count]];
-			m_figure = m_objectsMap[m_figures[m_count]];
-			std::getline(m_input, m_text, '\n');
-			TheTextManager::Instance()->setContent(m_text);
+
+			// Handle background timer and counter and change background if necessary
+			m_bgTimer--;
+			if (m_bgTimer == 0)
+			{
+				m_bgCounter++;
+				if (m_bgCounter < m_backgrounds.size())
+				{
+					m_background = m_objectsMap[m_backgrounds[m_bgCounter].first];
+					m_bgTimer = m_backgrounds[m_bgCounter].second;
+				}
+			}
+
+			// Handle figure timer and counter and change figure if necessary
+			m_fgTimer--;
+			if (m_fgTimer == 0)
+			{
+				m_fgCounter++;
+				if (m_fgCounter < m_figures.size())
+				{
+					m_figure = m_objectsMap[m_figures[m_fgCounter].first];
+					m_fgTimer = m_figures[m_fgCounter].second;
+				}
+			}
+
+			// Handle music timer and counter and change music if necessary
+			m_msTimer--;
+			if (m_msTimer == 0)
+			{
+				m_msCounter++;
+				if (m_msCounter < m_music.size())
+				{
+					TheAudioManager::Instance()->stop();
+					TheAudioManager::Instance()->play(m_music[m_msCounter].first);
+					m_msTimer = m_music[m_msCounter].second;
+				}
+			}
+
+			// Read text depend on current lines.
+			for (unsigned i = 0; i < m_textLines.at(m_count) - '0'; i++)
+			{
+				std::getline(m_input, m_text, '\n');
+				TheTextManager::Instance()->setContent(m_text, i);
+			}
 		}
 		else if (m_count == m_max)
 		{
@@ -191,7 +275,7 @@ void Scene::update()
 	{
 		TheInputHandler::Instance()->setDownFree();
 		m_focused_point++;
-		if (m_focused_point > m_nextSceneIDs.size() - 1) // hardcoding, will change it later
+		if (m_focused_point > m_nextSceneIDs.size() - 1) 
 		{
 			m_focused_point--;
 		}

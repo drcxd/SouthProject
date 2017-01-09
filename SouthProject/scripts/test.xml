@@ -1,9 +1,18 @@
 <?xml version="1.0" ?>
 <SCENES>
   <scene01>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene01.txt"/>
+      <textfile filename="scripts/scene01.txt"
+		lines="121"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="408" y="115" width="204" height="460"
@@ -13,15 +22,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="morning"/>
-      <background objectID="morning"/>
-      <background objectID="morning"/>
+      <background objectID="morning" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="yukino"/>
+      <figure objectID="null" pages="2"/>
+      <figure objectID="yukino" pages="1"/>
     </FIGURE>
 
     <CHOICES>

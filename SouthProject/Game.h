@@ -1,3 +1,9 @@
+/* 
+ * 
+ *
+ */
+
+
 #ifndef __Game__
 #define __Game__
 
@@ -28,7 +34,7 @@ public:
 	 GameStateMachine *getStateMachine(void) { return m_pGameStateMachine; }
 
 	 // Skeleton
-	 static Game* Instance()
+	 static Game *Instance()
 	 {
 		 if (s_pInstance == NULL)
 		 {
