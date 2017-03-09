@@ -1,16 +1,17 @@
-#include "TextureManager.h"
 #include <SDL_image.h>
+
+#include "TextureManager.h"
 
 /* TheTextureManager handles with texture loading, storage and rendering. */
 
-TextureManager* TextureManager::s_pInstance = NULL;
+TextureManager* TextureManager::s_pInstance = nullptr;
 
 // Load the texture specified by the fileName, saved with id in member variable m_textureMap
-bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer *pRenderer)
+bool TextureManager::load(const std::string &fileName, const std::string &id, SDL_Renderer *pRenderer)
 {
 	SDL_Surface *pTempSurface = IMG_Load(fileName.c_str());
 
-	if (pTempSurface == NULL)
+	if (pTempSurface == nullptr)
 	{
 		return false;
 	}
@@ -18,9 +19,9 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer *pR
 	SDL_Texture *pTexture = SDL_CreateTextureFromSurface(pRenderer, pTempSurface);
 
 	SDL_FreeSurface(pTempSurface);
-	pTempSurface = NULL;
+	pTempSurface = nullptr;
 
-	if (pTexture == NULL)
+	if (pTexture == nullptr)
 	{
 		return false;
 	}
@@ -31,7 +32,7 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer *pR
 }
 
 // Draw the texture specified by id on (x, y) with width and height
-void TextureManager::draw(std::string id, int x, int y, int width, int height, SDL_Renderer *pRenderer,
+void TextureManager::draw(const std::string &id, int x, int y, int width, int height, SDL_Renderer *pRenderer,
 	SDL_RendererFlip flip)
 {
 	SDL_Rect destRect;
@@ -41,11 +42,11 @@ void TextureManager::draw(std::string id, int x, int y, int width, int height, S
 	destRect.x = x;
 	destRect.y = y;
 
-	SDL_RenderCopyEx(pRenderer, m_textureMap[id], NULL, &destRect, 0, 0, flip);
+	SDL_RenderCopyEx(pRenderer, m_textureMap[id], nullptr, &destRect, 0, 0, flip);
 }
 
 // Advanced draw function with addtional param row and frame
-void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow,
+void TextureManager::drawFrame(const std::string &id, int x, int y, int width, int height, int currentRow,
 	int currentFrame, SDL_Renderer *pRenderer, SDL_RendererFlip flip)
 {
 	SDL_Rect srcRect;

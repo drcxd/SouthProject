@@ -1,14 +1,10 @@
-/* 
- * 
- *
- */
-
-
 #ifndef __Game__
 #define __Game__
 
-#include <SDL.h>
 #include <vector>
+
+#include <SDL.h>
+
 #include "TextureManager.h"
 #include "GameObject.h"
 #include "GameStateMachine.h"
@@ -36,7 +32,7 @@ public:
 	 // Skeleton
 	 static Game *Instance()
 	 {
-		 if (s_pInstance == NULL)
+		 if (s_pInstance == nullptr)
 		 {
 			 s_pInstance = new Game();
 		 }

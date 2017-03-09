@@ -1,8 +1,9 @@
 #ifndef __GameStateMachine__
 #define __GameStateMachine__
 
-#include "GameState.h"
 #include <vector>
+
+#include "GameState.h"
 
 class GameStateMachine
 {
@@ -13,6 +14,8 @@ public:
 	void popState(void);
 	void update(void);
 	void render(void);
+	GameState *getScene(void);
+	bool isEmpty(void) { return m_gameStates.empty(); }
 
 private:
 

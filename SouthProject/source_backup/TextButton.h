@@ -10,15 +10,15 @@ class TextButton
 {
 public:
 
-	TextButton(int x, int y, std::string text, const std::string &nextSceneID);
+	TextButton(int x, int y, std::string text, std::string nextSceneID);
 	~TextButton(void);
 	
 	void update(bool *quitPointer);
 	void clean(void);
 	void draw(void);
 	void setFocused(bool b);
-	bool isFocused(void) const;
-	bool isShowed(void) const;
+	bool isFocused(void);
+	bool isShowed(void);
 
 private:
 
@@ -30,7 +30,7 @@ private:
 	bool m_showed;
 	
 
-	// void jumpToScene(void);
+	void jumpToScene(void);
 	const std::string m_nextSceneID;
 };
 

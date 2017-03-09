@@ -1,10 +1,11 @@
 #ifndef __AudioManager__
 #define __AudioManager__
 
-#include <SDL_mixer.h>
 #include <map>
 #include <string>
 #include <iostream>
+
+#include <SDL_mixer.h>
 
 class AudioManager
 {
@@ -17,9 +18,10 @@ public:
 		return s_pInstance;
 	}
 
-	bool load(std::string fileName, std::string id);
-	void play(std::string id);
-	void stop();
+	bool load(const std::string fileName, const std::string id);
+	void clear(const std::string id);
+	void play(const std::string id);
+	void stop() const;
 
 private:
 

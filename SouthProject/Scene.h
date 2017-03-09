@@ -1,11 +1,6 @@
 #ifndef __Scene__
 #define __Scene__
 
-#include "GameState.h"
-#include "SDLGameObject.h"
-#include "Text.h"
-#include "TextButton.h"
-
 #include <vector>
 #include <map>
 #include <fstream>
@@ -14,12 +9,16 @@
 
 #include "tinyxml.h"
 
+#include "GameState.h"
+#include "SDLGameObject.h"
+#include "Text.h"
+#include "TextButton.h"
 
 class Scene : public GameState
 {
 public:
 
-	Scene(std::string scene) : m_sceneID(scene)
+	Scene(std::string scene, bool load) : m_sceneID(scene), m_bIsLoaded(load)
 	{
 	}
 
@@ -28,9 +27,13 @@ public:
 	virtual bool onEnter(void);
 	virtual bool onExit(void);
 	virtual std::string getStateID() const { return m_sceneID; }
-	bool *getQuitPointer(void) { return &m_bQuitPointer; }
+	bool *getQuitPointer(void) { return &m_bQuit; }
+	void getSaveInfo(std::string &sceneID, unsigned &count, unsigned &bgTimer, unsigned &fgTimer,
+		unsigned &msTimer, unsigned &bgCounter, unsigned &fgCounter, unsigned &msCounter);
 
 private:
+
+	bool m_bIsLoaded;
 
 	int m_count; // Total pages count
 	int m_max; // Varaiable holds total page number
@@ -48,20 +51,20 @@ private:
 	std::vector<std::string> m_nextSceneIDs;
 	unsigned m_focused_point;
 
-	bool m_bQuitPointer;
-
-	// TiXmlDocument m_xmlDoc;
-	// TiXmlElement *m_pRoot;
+	bool m_bQuit;
 
 	std::vector<std::pair<std::string, int>> m_backgrounds;
 	unsigned m_bgTimer;
 	unsigned m_bgCounter;
+
 	std::vector<std::pair<std::string, int>> m_figures;
 	unsigned m_fgTimer;
 	unsigned m_fgCounter;
+
 	std::vector<std::pair<std::string, int>> m_music;
 	unsigned m_msTimer;
 	unsigned m_msCounter;
+
 	std::map<std::string, GameObject *> m_objectsMap;
 };
 #endif // !__Scene__

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<MENU>
+  
+  <MAINMENU>
+    <button x="410" y="351" width="105" height="55"
+	    textureID="start_button" objectID="start_button"/>
+    <button x="410" y="411" width="105" height="55"
+	    textureID="load_button" objectID="load_button"/>
+    <button x="410" y="471" width="105" height="55"
+	    textureID="quit_button" objectID="quit_button"/>
+  </MAINMENU>
+
+  <LOADMENU>
+    <button x="" y="" width="" height=""
+	    textureID="yes_button" objectID="yes_button"/>
+    <button x="" y="" width="" height=""
+	    textureID="cancel_button" objectID="cancel_button"/>
+  </LOADMENU>
+
+  <PAUSEMENU>
+    <button x="410" y="291" width="105" height="55"
+	    textureID="resume_button" objectID="resume_button"/>
+    <button x="410" y="351" width="105" height="55"
+	    textureID="save_button" objectID="save_button"/>
+    <button x="410" y="411" width="105" height="55"
+	    textureID="load_button" objectID="load_button"/>
+    <button x="410" y="471" width="105" height="55"
+	    textureID="quit_button" objectID="quit_button"/>
+  </PAUSEMENU>
+  
+</MENU>
+  

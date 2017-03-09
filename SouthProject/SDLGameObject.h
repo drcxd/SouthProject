@@ -11,9 +11,10 @@ public:
 
 	SDLGameObject(const LoaderParams* pParams);
 
-	virtual void draw(void);
-	virtual void update(void);
-	virtual void clean(void);
+	void draw(void);
+	void update(void);
+	void clean(void); // The clean function don't do anything here
+							  // Because a SDLGameObejct has no allocated resource
 
 protected:
 

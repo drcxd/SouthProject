@@ -1,11 +1,11 @@
 #ifndef __Text__
 #define __Text__
 
-#include <SDL.h>
-#include <SDL_ttf.h>
-
 #include <string>
 #include <vector>
+
+#include <SDL.h>
+#include <SDL_ttf.h>
 
 class Text
 {
@@ -15,7 +15,7 @@ public:
 
 	static Text* Instance(void)
 	{
-		if (s_pInstance == NULL)
+		if (s_pInstance == nullptr)
 		{
 			s_pInstance = new Text();
 		}
@@ -23,26 +23,29 @@ public:
 		return s_pInstance;
 	}
 
-	void setContent(std::string, unsigned i);
+	void setContent(const std::string &content, unsigned i);
 	void draw(void);
 	void drawBackground(void);
 	void clean(void);
-	SDL_Texture *getTextTexture(std::string text);
+	SDL_Texture *getTextTexture(const std::string &text);
 
 private:
 
-	std::string m_content;
+	Text(void);
+
+	std::string m_Content;
 	std::vector<SDL_Texture *> m_pTextures;
 	SDL_Texture *m_pBackground;
 
 	bool setTexture(std::string content);
+
 	TTF_Font *m_pFont;
 	SDL_Color m_textColor = { 0, 0, 0 };
 
 	std::vector<int> m_Widths;
 	std::vector<int> m_Heights;
 
-	Text(void);
+	
 	static Text *s_pInstance;
 };
 

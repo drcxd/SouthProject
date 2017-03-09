@@ -22,7 +22,7 @@ int TEXT_ROW_START; // Start point of one row of text
 
 std::string title;
 
-int FRAME_TIME;
+unsigned FRAME_TIME;
 
 int main(int argc, char *argv[])
 {

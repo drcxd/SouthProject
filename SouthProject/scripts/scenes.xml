@@ -7,7 +7,7 @@
     
     <TEXT>
       <textfile filename="scripts/scene01.txt"
-		lines="121"/>
+		lines="111"/>
     </TEXT>
 
     <MUSIC>
@@ -37,9 +37,18 @@
   </scene01>
 
   <scene02>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene02.txt"/>
+      <textfile filename="scripts/scene02.txt"
+	  lines="111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="408" y="115" width="204" height="460"
@@ -49,15 +58,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="morning"/>
-      <background objectID="morning"/>
-      <background objectID="morning"/>
+      <background objectID="morning" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
+      <figure objectID="yukino" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -67,9 +72,17 @@
   </scene02>
 
   <scene03>
+    <PAGE>
+      <page pageNumber="1"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene03.txt"/>
+      <textfile filename="scripts/scene03.txt" lines="1"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="1"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="408" y="115" width="204" height="460"
@@ -79,11 +92,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="noon"/>
+      <background objectID="noon" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="yukino"/>
+      <figure objectID="yukino" pages="1"/>
     </FIGURE>
 
     <CHOICES>
@@ -93,9 +106,17 @@
   </scene03>
 
   <scene04>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene04.txt"/>
+      <textfile filename="scripts/scene04.txt" lines="111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="408" y="115" width="204" height="460"
@@ -105,15 +126,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="noon"/>
-      <background objectID="noon"/>
-      <background objectID="noon"/>
+      <background objectID="noon" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
+      <figure objectID="yukino" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -123,9 +140,17 @@
   </scene04>
 
   <scene05>
+    <PAGE>
+      <page pageNumber="1"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene05.txt"/>
+      <textfile filename="scripts/scene05.txt" lines="1"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="1"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="408" y="115" width="204" height="460"
@@ -135,11 +160,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="afternoon"/>
+      <background objectID="afternoon" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="yukino"/>
+      <figure objectID="yukino" pages="1"/>
     </FIGURE>
 
     <CHOICES>
@@ -149,9 +174,17 @@
   </scene05>
 
   <scene06>
+    <PAGE>
+      <page pageNumber="8"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene06.txt"/>
+      <textfile filename="scripts/scene06.txt" lines="11111111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="8"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -161,25 +194,14 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="null"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
-      <background objectID="street"/>
+      <background objectID="null" pages="1"/>
+      <background objectID="street" pages="8"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>      
+      <figure objectID="null" pages="1"/>
+      <figure objectID="yukino" pages="5"/>
+      <figure objectID="null" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -189,9 +211,17 @@
   </scene06>
 
   <scene07>
+    <PAGE>
+      <page pageNumber="5"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene07.txt"/>
+      <textfile filename="scripts/scene07.txt" lines="11111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="5"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -201,19 +231,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
+      <background objectID="afternoon" pages="5"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="yukino"/>
-      <figure objectID="yukino"/>
-      <figure objectID=""/>
-      <figure objectID=""/>
-      <figure objectID=""/>
+      <figure objectID="yukino" pages="2"/>
+      <figure objectID="null" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -223,9 +246,17 @@
   </scene07>
 
   <scene08>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene08.txt"/>
+      <textfile filename="scripts/scene08.txt" lines="111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.p3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -233,15 +264,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="blood"/>
-      <background objectID="blood"/>
-      <background objectID="blood"/>
+      <background objectID="blood" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
+      <figure objectID="null" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -251,10 +278,18 @@
   </scene08>
 
   <scene09>
+    <PAGE>
+      <page pageNumber="6"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene09.txt"/>
+      <textfile filename="scripts/scene09.txt" lines="111111"/>
     </TEXT>
 
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="6"/>
+    </MUSIC>
+    
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
 	      textureID="afternoon" objectID="afternoon"/>
@@ -263,21 +298,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
-      <background objectID="afternoon"/>
+      <background objectID="afternoon" pages="6"/>
     </BACKGROUND>
-
+	  
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="steve"/>
-      <figure objectID="steve"/>
-      <figure objectID="steve"/>
-      <figure objectID="steve"/>
+      <figure objectID="null" pages="2"/>
+      <figure objectID="steve" pages="4"/>
     </FIGURE>
 
     <CHOICES>
@@ -287,9 +313,17 @@
   </scene09>
 
   <scene10>
+    <PAGE>
+      <page pageNumbers="2"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene10.txt"/>
+      <textfile filename="scripts/scene10.txt" lines="11"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="2"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -299,13 +333,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="night"/>
-      <background objectID="night"/>
+      <background objectID="night" pages="2"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="strong_enemy"/>
-      <figure objectID="strong_enemy"/>
+      <figure objectID="strong_enemy" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -315,9 +347,17 @@
   </scene10>
 
   <scene11>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene11.txt"/>
+      <textfile filename="scripts/scene11.txt" lines="111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -333,15 +373,15 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="afternoon"/>
-      <background objectID="walkway"/>
-      <background objectID="broken_window"/>
+      <background objectID="afternoon" pages="1"/>
+      <background objectID="walkway" pages="1"/>
+      <background objectID="broken_window" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="steve"/>
-      <figure objectID="null"/>
-      <figure objectID="zombie_dog"/>
+      <figure objectID="steve" pages="1"/>
+      <figure objectID="null" pages="1"/>
+      <figure objectID="zombie_dog" pages="1"/>
     </FIGURE>
 
     <CHOICES>
@@ -351,9 +391,17 @@
   </scene11>
 
   <scene12>
+    <PAGE>
+      <page pageNumber="5"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene12.txt"/>
+      <textfile filename="scripts/scene12.txt" lines="11111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="5"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="341" y="115" width="560" height="527"
@@ -367,19 +415,14 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="walkway"/>
-      <background objectID="walkway"/>
-      <background objectID="walkway"/>
-      <background objectID="walkway"/>
-      <background objectID="walkway"/>
+      <background objectID="walkway" pages="5"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="zombie_dog"/>
-      <figure objectID="steve"/>
-      <figure objectID="null"/>
-      <figure objectID="strong_enemy"/>
-      <figure objectID="strong_enemy"/>
+      <figure objectID="zombie_dog" pages="1"/>
+      <figure objectID="steve" pages="1"/>
+      <figure objectID="null" pages="1"/>
+      <figure objectID="strong_enemy" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -389,9 +432,17 @@
   </scene12>
 
   <scene13>
+    <PAGE>
+      <page pageNumber="8"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene13.txt"/>
+      <textfile filename="scripts/scene13.txt" lines="11111111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="8"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="341" y="115" width="560" height="527"
@@ -409,25 +460,19 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="walkway"/>
-      <background objectID="walkway"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="walkway"/>
-      <background objectID="shelf"/>
+      <background objectID="walkway" pages="2"/>
+      <background objectID="classroom" pages="4"/>
+      <background objectID="walkway" pages="1"/>
+      <background objectID="shelf" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="zombie_dog"/>
-      <figure objectID="null"/>
-      <figure objectID="snake"/>
-      <figure objectID="null"/>
-      <figure objectID="steve"/>
-      <figure objectID="steve"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
+      <figure objectID="zombie_dog" pages="1"/>
+      <figure objectID="null" pages="1"/>
+      <figure objectID="snake" pages="1"/>
+      <figure objectID="null" pages="1"/>
+      <figure objectID="steve" pages="2"/>
+      <figure objectID="null" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -437,9 +482,17 @@
   </scene13>
 
   <scene14>
+    <PAGE>
+      <page pageNumber="1"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene14.txt"/>
+      <textfile filename="scripts/scene14.txt" lines="1"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="1"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -447,11 +500,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="fork"/>
+      <background objectID="fork" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
+      <figure objectID="null" pages="1"/>
     </FIGURE>
 
     <CHOICES>
@@ -462,9 +515,17 @@
   </scene14>
 
   <scene15>
+    <PAGE>
+      <page pageNumber="2"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene15.txt"/>
+      <textfile filename="scripts/scene15.txt" lines="11"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="1"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="341" y="115" width="479" height="460"
@@ -474,13 +535,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="fork"/>
-      <background objectID="fork"/>
+      <background objectID="fork" pages="2"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="ugly_enemy"/>
-      <figure objectID="ugly_enemy"/>
+      <figure objectID="ugly_enemy" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -490,9 +549,17 @@
   </scene15>
 
   <scene16>
+    <PAGE>
+      <page pageNumber="4"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene16.txt"/>
+      <textfile filename="scripts/scene16.txt" lines="1111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="4"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -500,17 +567,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="sky"/>
-      <background objectID="sky"/>
-      <background objectID="sky"/>
-      <background objectID="sky"/>
+      <background objectID="sky" pages="4"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
+      <figure objectID="null" pages="4"/>
     </FIGURE>
 
     <CHOICES>
@@ -520,10 +581,18 @@
   </scene16>
 
   <scene17>
+    <PAGE>
+      <page pageNumber="2"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene17.txt"/>
+      <textfile filename="scripts/scene17.txt" lines="11"/>
     </TEXT>
 
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="2"/>
+    </MUSIC>
+    
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
 	      textureID="fork" objectID="fork"/>
@@ -532,13 +601,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="fork"/>
-      <background objectID="fork"/>
+      <background objectID="fork" pages="2"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="strong_enemy"/>
-      <figure objectID="strong_enemy"/>
+      <figure objectID="strong_enemy" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -548,9 +615,17 @@
   </scene17>
 
   <scene18>
+    <PAGE>
+      <page pageNumber="6"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene18.txt"/>
+      <textfile filename="scripts/scene18.txt" lines="111111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="6"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="341" y="115" width="479" height="460"
@@ -564,21 +639,14 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="shelf"/>
-      <background objectID="shelf"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
+      <background objectID="shelf" pages="2"/>
+      <background objectID="classroom" pages="4"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="zombie"/>
-      <figure objectID="zombie"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="steve"/>
-      <figure objectID="steve"/>
+      <figure objectID="zombie" pages="2"/>
+      <figure objectID="null" pages="2"/>
+      <figure objectID="steve" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -588,9 +656,17 @@
   </scene18>
 
   <scene19>
+    <PAGE>
+      <page pageNumber="3"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene19.txt"/>
+      <textfile filename="scripts/scene19.txt" lines="111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="3"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -600,15 +676,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
+      <background objectID="classroom" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="steve"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
+      <figure objectID="steve" pages="1"/>
+      <figure objectID="null" pages="2"/>
     </FIGURE>
 
     <CHOICES>
@@ -618,9 +691,17 @@
   </scene19>
 
   <scene20>
+    <PAGE>
+      <page pageNumber="6"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene20.txt"/>
+      <textfile filename="scripts/scene20.txt" lines="111111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="6"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="194" y="0" width="635" height="576"
@@ -630,21 +711,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
+      <background objectID="classroom" pages="6"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="lucy"/>
-      <figure objectID="lucy"/>
-      <figure objectID="lucy"/>
+      <figure objectID="null" pages="3"/>
+      <figure objectID="lucy" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -654,9 +726,17 @@
   </scene20>
 
   <scene21>
+    <PAGE>
+      <page pageNumber="6"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene21.txt"/>
+      <textfile filename="scripts/scene21.txt" lines="111111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="6"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="341" y="115" width="479" height="460"
@@ -666,21 +746,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
-      <background objectID="classroom"/>
+      <background objectID="classroom" pages="6"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="null"/>
-      <figure objectID="ninja"/>
-      <figure objectID="ninja"/>
-      <figure objectID="ninja"/>
+      <figure objectID="null" pages="3"/>
+      <figure objectID="ninja" pages="3"/>
     </FIGURE>
 
     <CHOICES>
@@ -689,9 +760,17 @@
   </scene21>
 
   <scene22>
+    <PAGE>
+      <page pageNumber="4"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene22.txt"/>
+      <textfile filename="scripts/scene22.txt" lines="1111"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="4"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="194" y="0" width="635" height="576"
@@ -703,17 +782,12 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="classroom"/>
-      <background objectID="early_morning"/>
-      <background objectID="early_morning"/>
-      <background objectID="early_morning"/>
+      <background objectID="classroom" pages="1"/>
+      <background objectID="early_morning" pages="3"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="lucy"/>
-      <figure objectID="lucy"/>
-      <figure objectID="lucy"/>
-      <figure objectID="lucy"/>
+      <figure objectID="lucy" pages="4"/>
     </FIGURE>
 
     <CHOICES>
@@ -723,9 +797,17 @@
   </scene22>
 
   <scene23>
+    <PAGE>
+      <page pageNumber="1"/>
+    </PAGE>
+    
     <TEXT>
-      <textfile filename="scripts/scene23.txt"/>
+      <textfile filename="scripts/scene23.txt" lines="1"/>
     </TEXT>
+
+    <MUSIC>
+      <musicfile filename="music/StartMenu.mp3" id="test" pages="1"/>
+    </MUSIC>
 
     <OBJECTS>
       <object x="0" y="0" width="1024" height="576"
@@ -733,11 +815,11 @@
     </OBJECTS>
 
     <BACKGROUND>
-      <background objectID="main_bg"/>
+      <background objectID="main_bg" pages="1"/>
     </BACKGROUND>
 
     <FIGURE>
-      <figure objectID="null"/>
+      <figure objectID="null" pages="1"/>
     </FIGURE>
 
     <CHOICES>

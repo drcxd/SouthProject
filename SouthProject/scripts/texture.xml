@@ -22,6 +22,36 @@
   <texture filename="image/lucy.jpg" textureID="lucy"/>
   <texture filename="image/ninja.png" textureID="ninja"/>
   <texture filename="image/early_morning.png" textureID="early_morning"/>
+  <texture filename="image/button/start.png" textureID="start_button"/>
+  <texture filename="image/button/load.png" textureID="load_button"/>
+  <texture filename="image/button/quit.png" textureID="quit_button"/>
+  <texture filename="image/button/save.png" textureID="save_button"/>
+  <texture filename="image/button/resume.png" textureID="resume_button"/>
+  <texture filename="image/pause_bg.jpg" textureID="pause_bg"/>
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
+  <!-- <texture filename="" textureID=""/> -->
   <!-- <texture filename="" textureID=""/> -->
   <!-- <texture filename="" textureID=""/> -->
 </TEXTURES>
