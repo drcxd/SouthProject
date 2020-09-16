@@ -49,7 +49,7 @@ private:
 
 	std::vector<TextButton *> m_textButtons;
 	std::vector<std::string> m_nextSceneIDs;
-	unsigned m_focused_point;
+	int m_focused_point;
 
 	bool m_bQuit;
 
